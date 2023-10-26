@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
     // std::cout << public_key << "\n";
     // std::cout << rsa.verify_signature("test.txt", "test.txt.signature");
 
-    Aes128cbc sym;
+    BfCbc sym;
     
     function(&sym);
 

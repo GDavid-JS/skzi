@@ -47,30 +47,6 @@ protected:
     }
 
     virtual std::string template_generate_key(const int key_length) {
-        // unsigned char key_data[key_length];
-
-        // RAND_bytes(key_data, key_length);
-
-        // std::string input(reinterpret_cast<const char*>(key_data), key_length);
-
-        // BIO* bmem = BIO_new(BIO_s_mem());
-        // BIO* b64 = BIO_new(BIO_f_base64());
-        // BIO_set_flags(b64, BIO_FLAGS_BASE64_NO_NL);
-        // BIO_push(b64, bmem);
-        // BIO_write(b64, input.c_str(), input.size());
-        // BIO_flush(b64);
-
-        // BUF_MEM* bptr;
-        // BIO_get_mem_ptr(b64, &bptr);
-
-        // std::string output(bptr->data, bptr->length - 1);
-
-        // BIO_free_all(b64);
-
-        // key = output;
-        // return key;
-
-
         key.resize(key_length);
 
         RAND_bytes(reinterpret_cast<unsigned char*>(&key[0]), key_length);
