@@ -1,3 +1,4 @@
+// mainwindow.h
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
@@ -12,8 +13,15 @@ class MainWindow : public QMainWindow
     Q_OBJECT
 
 public:
-    MainWindow(QWidget *parent = nullptr);
+    explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+
+private slots:
+    // void pushButton();
+    // void pushButton_3();
+    // void pushButton_5();
+    // void pushButton_6();
+    // void pushButton_8();
 
 private:
     Ui::MainWindow *ui;

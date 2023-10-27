@@ -55,12 +55,6 @@ protected:
     }
 
 public:
-    Symmetric() {}
-    
-    Symmetric(const std::string& key) : key(key) {}
-
-    ~Symmetric() {}
-
     virtual void set_key(std::string key) {
         this->key = key;
     }

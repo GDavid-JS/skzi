@@ -2,7 +2,6 @@
 #include <openssl/buffer.h>
 #include <openssl/evp.h>
 #include <openssl/rsa.h>
-#include <openssl/ec.h>
 #include <openssl/dsa.h>
 #include <openssl/pem.h>
 #include <openssl/err.h>
@@ -24,8 +23,10 @@
 #include "asymmetric/asymmetric.cpp"
 #include "asymmetric/encryption_manager.cpp"
 #include "asymmetric/signature_manager.cpp"
+// #include "asymmetric/asymmetric_classes.cpp"
 #include "asymmetric/rsa.cpp"
 #include "asymmetric/dsa.cpp"
+#include "asymmetric/elliptic.cpp"
 
 // symetric
 #include "symmetric/symmetric.cpp"
