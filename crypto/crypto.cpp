@@ -23,10 +23,10 @@
 #include "asymmetric/asymmetric.cpp"
 #include "asymmetric/encryption_manager.cpp"
 #include "asymmetric/signature_manager.cpp"
-// #include "asymmetric/asymmetric_classes.cpp"
-#include "asymmetric/rsa.cpp"
-#include "asymmetric/dsa.cpp"
-#include "asymmetric/elliptic.cpp"
+#include "asymmetric/algoritms/rsa.cpp"
+#include "asymmetric/algoritms/rsa_pss.cpp"
+#include "asymmetric/algoritms/dsa.cpp"
+#include "asymmetric/algoritms/ec.cpp"
 
 // symetric
 #include "symmetric/symmetric.cpp"

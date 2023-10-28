@@ -26,57 +26,6 @@ private:
 protected:
     EVP_PKEY* key = nullptr;
     
-    template <typename Func> void template_generate_keys(Func&& func, int keyType, const unsigned short size) {
-        // E</typename>VP_PKEY_CTX* ctx_params = EVP_PKEY_CTX_new_id(keyType, nullptr);
-        // EVP_PKEY_keygen_init(ctx_params);
-        // func(ctx_params, size);
-        // EVP_PKEY_keygen(ctx, &key);
-        // EVP_PKEY_CTX_free(ctx);
-
-
-        // EVP_PKEY* pkey_params = NULL;
-        // EVP_PKEY_paramgen(ctx_params, &pkey_params);
-
-        // // using parameters, build DSA keypair
-        // EVP_PKEY_CTX *ctx = EVP_PKEY_CTX_new(pkey_params, NULL);
-        // EVP_PKEY_keygen_init(ctx);
-        
-        // EVP_PKEY* pkey = NULL;
-        // EVP_PKEY_keygen(ctx, &pkey);
-
-        // // cleanup everything but the final key
-        // EVP_PKEY_free(pkey_params);
-        // EVP_PKEY_CTX_free(ctx_params);
-        // EVP_PKEY_CTX_free(ctx);
-    
-        // build parameters first
-        EVP_PKEY_CTX *ctx_params = EVP_PKEY_CTX_new_id(keyType, NULL);
-        EVP_PKEY_paramgen_init(ctx_params);
-        func(ctx_params, size);
-
-        EVP_PKEY* pkey_params = NULL;
-        EVP_PKEY_paramgen(ctx_params, &pkey_params);
-
-        // using parameters, build DSA keypair
-        EVP_PKEY_CTX *ctx = EVP_PKEY_CTX_new(pkey_params, NULL);
-        EVP_PKEY_keygen_init(ctx);
-        
-        // EVP_PKEY* pkey = NULL;
-        EVP_PKEY_keygen(ctx, &key);
-
-        // cleanup everything but the final key
-        EVP_PKEY_free(pkey_params);
-        EVP_PKEY_CTX_free(ctx_params);
-        EVP_PKEY_CTX_free(ctx);
-
-        // DSA* dsa = EVP_PKEY_get1_DSA(pkey);
-        // BIO* bio = BIO_new_fp(stdout, BIO_NOCLOSE);
-        // PEM_write_bio_DSAPrivateKey(bio, dsa, NULL, NULL, 0, NULL, NULL);
-        // BIO_flush(bio);
-        // DSA_free(dsa);
-        // EVP_PKEY_free(pkey);
-    }
-
 public:
 
     ~Asymmetric() {
