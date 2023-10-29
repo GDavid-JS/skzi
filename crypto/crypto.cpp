@@ -6,13 +6,13 @@
 #include <openssl/pem.h>
 #include <openssl/err.h>
 #include <openssl/aes.h>
+#include <openssl/x509.h>
 
 //base
 #include <iostream>
 #include <fstream>
 #include <string>
 #include <vector>
-#include <cstdlib>
 #include <ctime>
 #include <chrono>
 #include <functional>
@@ -26,7 +26,7 @@
 #include "asymmetric/algoritms/rsa.cpp"
 #include "asymmetric/algoritms/rsa_pss.cpp"
 #include "asymmetric/algoritms/dsa.cpp"
-#include "asymmetric/algoritms/ec.cpp"
+#include "asymmetric/algoritms/ecdsa.cpp"
 
 // symetric
 #include "symmetric/symmetric.cpp"

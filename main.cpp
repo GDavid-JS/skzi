@@ -12,8 +12,9 @@ int main(int argc, char *argv[]) {
     // MainWindow w;
     // w.show();
 
-    // RsaPss asym;
-    // asym.generate_keys();
+    RsaPss asym;
+    asym.generate_keys();
+    asym.generateSelfSignedCertificateX509("David Grigoryan", "example", "example@example.com");
     // std::string public_key = asym.get_public();
     // asym.sign_file("test.txt", "test.txt.signature");
     // std::cout << public_key << "\n";

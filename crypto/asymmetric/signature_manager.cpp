@@ -73,15 +73,10 @@ public:
         signature_file.close();
         EVP_MD_CTX_free(md_ctx);
 
-        if (verify_result == 1) {
-            // Подпись верна
-            return true;
-        } else if (verify_result == 0) {
-            // Подпись неверна
-            return false;
-        } else {
-            // Обработка ошибки при проверке подписи
-            return false;
-        }
+        return verify_result;
+    }
+
+    virtual void certificate() {
+        
     }
 };

@@ -1,4 +1,4 @@
-class Ec: public SignatureManager {
+class Ecdsa: public SignatureManager {
 public:
     void generate_keys() override {
         EVP_PKEY_CTX *ctx_params = EVP_PKEY_CTX_new_id(EVP_PKEY_EC, NULL);
