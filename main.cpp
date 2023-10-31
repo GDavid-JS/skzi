@@ -8,14 +8,17 @@
 // // }
 
 int main(int argc, char *argv[]) {
-    // QApplication a(argc, argv);
-    // MainWindow w;
-    // w.show();
+    QApplication a(argc, argv);
+    MainWindow w;
+    w.show();
 
-    RsaPss asym;
-    asym.generate_keys();
-    asym.generateSelfSignedCertificateX509("David Grigoryan", "example", "example@example.com");
-    // std::string public_key = asym.get_public();
+
+    // Rsa asym;
+    // asym.generate_keys();
+    // std::cout << asym.get_public();
+    // std::cout << asym.get_private();
+    // std::cout << asym.generate_self_signed_certificate_X509(1, "David Grigoryan", "example", "example@example.com");
+
     // asym.sign_file("test.txt", "test.txt.signature");
     // std::cout << public_key << "\n";
     // std::cout << asym.verify_signature("test.txt", "test.txt.signature") << "\n";
@@ -28,7 +31,5 @@ int main(int argc, char *argv[]) {
     // std::cout << encrypt_text << "\n";
     // std::cout << decrypt_text << "\n";
 
-
-
-    // return a.exec();
+    return a.exec();
 }

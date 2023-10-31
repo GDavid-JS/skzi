@@ -44,15 +44,7 @@ public:
         return from_evp(&PEM_write_bio_PrivateKey, nullptr, nullptr, 0, nullptr, nullptr);
     }
 
-    virtual void fromX509(std::string x509_filepath) {
-        std::ifstream x509_file(x509_filepath, std::ios::binary);
-        
-        fromX509(x509_file);
-    }
-
-    virtual void fromX509(std::ifstream& x509_file) {
-        std::string x509_content((std::istreambuf_iterator<char>(x509_file)), std::istreambuf_iterator<char>());
-
+    virtual void from_X509(const std::string& x509_content) {
         BIO* x509_bio = BIO_new_mem_buf(x509_content.c_str(), -1);
         X509* x509 = PEM_read_bio_X509(x509_bio, nullptr, nullptr, nullptr);
 
@@ -61,12 +53,13 @@ public:
         BIO_free(x509_bio);
     }
 
-    virtual void generateSelfSignedCertificateX509(const std::string& commonName, const std::string& organization, const std::string& emailAddress) {
+
+    virtual std::string generate_self_signed_certificate_X509(int id, const std::string& commonName, const std::string& organization, const std::string& emailAddress) {
         X509* x509 = X509_new();
 
         // Создаем сертификат с открытым ключом
         X509_set_version(x509, 2); // Версия X.509 сертификата
-        ASN1_INTEGER_set(X509_get_serialNumber(x509), 1); // Уникальный серийный номер
+        ASN1_INTEGER_set(X509_get_serialNumber(x509), id); // Уникальный серийный номер
         X509_gmtime_adj(X509_get_notBefore(x509), 0); // Дата начала действия
         X509_gmtime_adj(X509_get_notAfter(x509), 31536000L); // Дата окончания действия (1 год)
         X509_set_pubkey(x509, key);
@@ -82,13 +75,20 @@ public:
 
         // Подписываем сертификат с использованием закрытого ключа
         X509_sign(x509, key, EVP_sha256());
-            
 
-        FILE* certFile = fopen("self_signed_certificate.pem", "wb");
-        PEM_write_X509(certFile, x509);
+        // Преобразуем сертификат в строку в формате PEM
+        BIO* bio = BIO_new(BIO_s_mem());
+        PEM_write_bio_X509(bio, x509);
+        char* buffer;
+        long length = BIO_get_mem_data(bio, &buffer);
+        std::string pem_cert(buffer, length);
 
+        BIO_free(bio);
         X509_free(x509);
+
+        return pem_cert;
     }
+
 
 
 
