@@ -20,7 +20,7 @@ protected:
     
 public:
 
-    ~Asymmetric() {
+    virtual ~Asymmetric() {
         EVP_PKEY_free(this->key);
     }
 

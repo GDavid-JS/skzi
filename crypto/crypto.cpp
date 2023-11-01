@@ -17,17 +17,18 @@
 #include <chrono>
 #include <functional>
 #include <initializer_list>
-#include <thread>
+#include <map>
+#include <memory>
 
 // assymetric
 #include "asymmetric/asymmetric.cpp"
 #include "asymmetric/encryption_manager.cpp"
 #include "asymmetric/signature_manager.cpp"
-#include "asymmetric/algoritms/rsa.cpp"
-#include "asymmetric/algoritms/rsa_pss.cpp"
-#include "asymmetric/algoritms/dsa.cpp"
-#include "asymmetric/algoritms/ecdsa.cpp"
+#include "asymmetric/algorithms.cpp"
+
 
 // symetric
 #include "symmetric/symmetric.cpp"
-#include "symmetric/symmetric_classes.cpp"
+#include "symmetric/algorithms.cpp"
+
+#include "algorithm_registry.cpp"
