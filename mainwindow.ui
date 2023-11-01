@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1266</width>
-    <height>874</height>
+    <width>1269</width>
+    <height>808</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -102,14 +102,14 @@
    <widget class="QStackedWidget" name="stackedWidget">
     <property name="geometry">
      <rect>
-      <x>360</x>
-      <y>30</y>
-      <width>751</width>
-      <height>631</height>
+      <x>370</x>
+      <y>20</y>
+      <width>721</width>
+      <height>711</height>
      </rect>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="general">
      <widget class="QWidget" name="verticalLayoutWidget_2">
@@ -203,7 +203,7 @@
         <x>0</x>
         <y>0</y>
         <width>601</width>
-        <height>631</height>
+        <height>651</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_4">
@@ -215,7 +215,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="lineEdit_6">
+        <widget class="QLineEdit" name="asymmetric_search">
          <property name="placeholderText">
           <string>поиск</string>
          </property>
@@ -226,31 +226,44 @@
        </item>
        <item>
         <layout class="QGridLayout" name="gridLayout">
-         <item row="1" column="0">
-          <widget class="QPushButton" name="pushButton_11">
-           <property name="text">
-            <string>Создать</string>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="1">
-          <widget class="QPushButton" name="pushButton_8">
-           <property name="text">
-            <string>Удалить</string>
-           </property>
-          </widget>
-         </item>
          <item row="0" column="0">
-          <widget class="QPushButton" name="pushButton_10">
-           <property name="text">
-            <string>Установить</string>
+          <widget class="QPushButton" name="asymmetric_export_button">
+           <property name="enabled">
+            <bool>false</bool>
            </property>
-          </widget>
-         </item>
-         <item row="0" column="1">
-          <widget class="QPushButton" name="pushButton_9">
            <property name="text">
             <string>Экпортировать</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <layout class="QHBoxLayout" name="horizontalLayout">
+           <item>
+            <widget class="QComboBox" name="asymmetric_combo_box"/>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="asymmetric_name">
+             <property name="placeholderText">
+              <string>название</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="asymmetric_create_button">
+             <property name="text">
+              <string>Создать</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item row="1" column="0">
+          <widget class="QPushButton" name="asymmetric_delete_button">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="text">
+            <string>Удалить</string>
            </property>
           </widget>
          </item>
@@ -298,6 +311,9 @@
          </item>
          <item row="1" column="1">
           <widget class="QPushButton" name="pushButton_13">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
            <property name="text">
             <string>Удалить</string>
            </property>
@@ -312,6 +328,9 @@
          </item>
          <item row="0" column="1">
           <widget class="QPushButton" name="pushButton_15">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
            <property name="text">
             <string>Экпортировать</string>
            </property>
@@ -329,7 +348,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1266</width>
+     <width>1269</width>
      <height>28</height>
     </rect>
    </property>

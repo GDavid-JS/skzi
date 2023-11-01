@@ -1,4 +1,3 @@
-#include "crypto/crypto.cpp"
 #include "mainwindow.h"
 #include <QApplication>
 
@@ -7,10 +6,21 @@
 // //     std::cout << key << "\n";
 // // }
 
+// Asymmetric* create_key(std::string name) {
+//     if (name == "Rsa512") {
+//         return new Rsa512;
+//     }
+// }
+
+
+
 int main(int argc, char *argv[]) {
     QApplication a(argc, argv);
     MainWindow w;
     w.show();
+
+
+
 
 
     // Rsa asym;
