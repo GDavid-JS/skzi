@@ -10,10 +10,10 @@ set(CMAKE_AUTORCC ON)
 set(CMAKE_AUTOUIC ON)
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
-find_package(Qt5 COMPONENTS Concurrent Widgets Charts REQUIRED)
+find_package(Qt5 COMPONENTS Concurrent Widgets Charts Sql REQUIRED)
 find_package(OpenSSL REQUIRED)
 
-find_library(SQLITE3_LIB libsqlite3.a sqlite3)
+# find_library(SQLITE3_LIB libsqlite3.a sqlite3)
 
 
 # Установка пути к библиотеке QCustomPlot
@@ -34,9 +34,10 @@ target_link_libraries(main PRIVATE
     Qt5::Widgets
     Qt5::Charts
     Qt5::Concurrent
+    Qt5::Sql
     qcustomplot
     ${OPENSSL_LIBRARIES}
     OpenSSL::Crypto
-    ${SQLITE3_LIB} 
+    # ${SQLITE3_LIB} 
 )
 

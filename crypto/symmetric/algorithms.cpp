@@ -1,8 +1,8 @@
 #define SYMMETRIC_CLASS(class_name, size, type_macro) \
 class class_name : public Symmetric { \
 public: \
-    std::string generate_key() override { \
-        return Symmetric::template_generate_key(size); \
+    void generate_key() override { \
+        Symmetric::template_generate_key(size); \
     } \
     std::string encrypt(const std::string& data) override { \
         return Symmetric::template_encrypt(type_macro, data); \

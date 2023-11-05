@@ -21,7 +21,9 @@
 #include <QTableWidgetItem>
 
 //sql
-#include <sqlite3.h>
+#include <QSqlDatabase>
+#include <QSqlQuery>
+// #include <sqlite3.h>
 
 // crypto
 #include "crypto/crypto.cpp"
@@ -58,7 +60,7 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
-    sqlite3* db;
+    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
 };
 
 #endif // MAINWINDOW_H

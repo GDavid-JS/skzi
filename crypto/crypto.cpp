@@ -22,8 +22,8 @@
 
 // assymetric
 #include "asymmetric/asymmetric.cpp"
-#include "asymmetric/encryption_manager.cpp"
-#include "asymmetric/signature_manager.cpp"
+#include "asymmetric/encryption.cpp"
+#include "asymmetric/signature.cpp"
 #include "asymmetric/algorithms.cpp"
 
 

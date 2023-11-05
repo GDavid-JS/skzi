@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1269</width>
+    <width>1249</width>
     <height>808</height>
    </rect>
   </property>
@@ -14,96 +14,11 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QListView" name="listView">
-    <property name="geometry">
-     <rect>
-      <x>0</x>
-      <y>0</y>
-      <width>321</width>
-      <height>671</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QWidget" name="verticalLayoutWidget">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>20</y>
-      <width>271</width>
-      <height>521</height>
-     </rect>
-    </property>
-    <layout class="QVBoxLayout" name="verticalLayout">
-     <item>
-      <widget class="QLineEdit" name="lineEdit">
-       <property name="placeholderText">
-        <string>поиск</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="general_button">
-       <property name="text">
-        <string>Общее</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="asymmetric_button">
-       <property name="text">
-        <string>Асимметричные ключи</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="symmetric_button">
-       <property name="text">
-        <string>Симметричные ключи</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="certificates_button">
-       <property name="text">
-        <string>Сертификаты</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="signature_button">
-       <property name="text">
-        <string>Создание подписи</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="verification_button">
-       <property name="text">
-        <string>Проверка подписи</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="encrypt_button">
-       <property name="text">
-        <string>Зашифровать файл</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="decrypt_button">
-       <property name="text">
-        <string>Расшифровать файл</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </widget>
    <widget class="QStackedWidget" name="stackedWidget">
     <property name="geometry">
      <rect>
-      <x>370</x>
-      <y>20</y>
+      <x>400</x>
+      <y>30</y>
       <width>721</width>
       <height>711</height>
      </rect>
@@ -226,16 +141,9 @@
        </item>
        <item>
         <layout class="QGridLayout" name="gridLayout">
-         <item row="0" column="0">
-          <widget class="QPushButton" name="asymmetric_export_button">
-           <property name="enabled">
-            <bool>false</bool>
-           </property>
-           <property name="text">
-            <string>Экпортировать</string>
-           </property>
-          </widget>
-         </item>
+         <property name="spacing">
+          <number>7</number>
+         </property>
          <item row="2" column="0">
           <layout class="QHBoxLayout" name="horizontalLayout">
            <item>
@@ -264,6 +172,16 @@
            </property>
            <property name="text">
             <string>Удалить</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="0">
+          <widget class="QPushButton" name="asymmetric_export_button">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="text">
+            <string>Экпортировать</string>
            </property>
           </widget>
          </item>
@@ -302,6 +220,16 @@
        </item>
        <item>
         <layout class="QGridLayout" name="gridLayout_2">
+         <item row="0" column="1">
+          <widget class="QPushButton" name="pushButton_15">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="text">
+            <string>Экпортировать</string>
+           </property>
+          </widget>
+         </item>
          <item row="1" column="0">
           <widget class="QPushButton" name="pushButton_12">
            <property name="text">
@@ -326,21 +254,89 @@
            </property>
           </widget>
          </item>
-         <item row="0" column="1">
-          <widget class="QPushButton" name="pushButton_15">
-           <property name="enabled">
-            <bool>false</bool>
-           </property>
-           <property name="text">
-            <string>Экпортировать</string>
-           </property>
-          </widget>
-         </item>
         </layout>
        </item>
       </layout>
      </widget>
     </widget>
+   </widget>
+   <widget class="QWidget" name="verticalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>30</y>
+      <width>321</width>
+      <height>681</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QLineEdit" name="lineEdit">
+       <property name="placeholderText">
+        <string>поиск</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="general_button">
+       <property name="text">
+        <string>Общее</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="asymmetric_button">
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string>Асимметричные ключи</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="symmetric_button">
+       <property name="text">
+        <string>Симметричные ключи</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="certificates_button">
+       <property name="text">
+        <string>Сертификаты</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="signature_button">
+       <property name="text">
+        <string>Создание подписи</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="verification_button">
+       <property name="text">
+        <string>Проверка подписи</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="encrypt_button">
+       <property name="text">
+        <string>Зашифровать файл</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="decrypt_button">
+       <property name="text">
+        <string>Расшифровать файл</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -348,7 +344,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1269</width>
+     <width>1249</width>
      <height>28</height>
     </rect>
    </property>
