@@ -20,10 +20,20 @@
 #include <QLabel>
 #include <QTableWidgetItem>
 
+#include <QStringList>
+#include <QTableWidget>
+#include <QSqlQuery>
+#include <QHeaderView>
+
+
 //sql
 #include <QSqlDatabase>
 #include <QSqlQuery>
+#include <QSqlError>
+#include <QSqlRecord>
 // #include <sqlite3.h>
+
+#include "sql_table.cpp"
 
 // crypto
 #include "crypto/crypto.cpp"
@@ -39,28 +49,33 @@ public:
     explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
-    static int show_table(QTableWidget *tableWidget, int argc, char **argv, char **azColName);
-    static int add_row(QTableWidget *tableWidget, int argc, char **argv, char **azColName);
-    static int asymmetric_table(void *data, int argc, char **argv, char **azColName);
-    static int asymmetric_algoritms(void *data, int argc, char **argv, char **azColName);
-    static std::tuple<int, int> get_selected_row(QTableWidget *tableWidget);
-    static int asymmetric_export(void *data, int argc, char **argv, char **azColName);
-    // static int symmetric_table(void *data, int argc, char **argv, char **azColName);
+    void init_asymmetric();
+    void init_symmetric();
 
 private slots:
     void general_click();
     void asymmetric_click();
-    // void symmetric_click();
+    void symmetric_click();
+    void certificate_click();
+    void signature_click();
+    void verification_click();
+    void encrypt_click();
+    void decrypt_click();
 
     void asymmetric_search(const QString &text);
+    void asymmetric_delete();
+    void asymmetric_export();
+    void asymmetric_create();
 
-    void asymmetric_delete_click();
-    void asymmetric_export_click();
-    void asymmetric_create_click();
-
+    void symmetric_search(const QString &text);
+    void symmetric_delete();
+    void symmetric_export();
+    void symmetric_create();
 private:
     Ui::MainWindow *ui;
     QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
+    SqlTable asymmetric_table;
+    SqlTable symmetric_table;
 };
 
 #endif // MAINWINDOW_H

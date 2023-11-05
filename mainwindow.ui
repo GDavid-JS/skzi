@@ -24,7 +24,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>2</number>
     </property>
     <widget class="QWidget" name="general">
      <widget class="QWidget" name="verticalLayoutWidget_2">
@@ -123,7 +123,7 @@
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_4">
        <item>
-        <widget class="QLabel" name="label_12">
+        <widget class="QLabel" name="Asymmetric_label">
          <property name="text">
           <string>Асимметричные ключи</string>
          </property>
@@ -197,19 +197,19 @@
         <x>0</x>
         <y>0</y>
         <width>601</width>
-        <height>631</height>
+        <height>651</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_5">
        <item>
-        <widget class="QLabel" name="label_13">
+        <widget class="QLabel" name="symmetric_label">
          <property name="text">
           <string>Симметричные ключи</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="lineEdit_7">
+        <widget class="QLineEdit" name="symmetric_search">
          <property name="placeholderText">
           <string>поиск</string>
          </property>
@@ -220,25 +220,32 @@
        </item>
        <item>
         <layout class="QGridLayout" name="gridLayout_2">
-         <item row="0" column="1">
-          <widget class="QPushButton" name="pushButton_15">
-           <property name="enabled">
-            <bool>false</bool>
-           </property>
-           <property name="text">
-            <string>Экпортировать</string>
-           </property>
-          </widget>
+         <property name="spacing">
+          <number>7</number>
+         </property>
+         <item row="2" column="0">
+          <layout class="QHBoxLayout" name="horizontalLayout_2">
+           <item>
+            <widget class="QComboBox" name="symmetric_combo_box"/>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="symmetric_name">
+             <property name="placeholderText">
+              <string>название</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="symmetric_create_button">
+             <property name="text">
+              <string>Создать</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
          </item>
          <item row="1" column="0">
-          <widget class="QPushButton" name="pushButton_12">
-           <property name="text">
-            <string>Создать</string>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="1">
-          <widget class="QPushButton" name="pushButton_13">
+          <widget class="QPushButton" name="symmetric_delete_button">
            <property name="enabled">
             <bool>false</bool>
            </property>
@@ -248,15 +255,93 @@
           </widget>
          </item>
          <item row="0" column="0">
-          <widget class="QPushButton" name="pushButton_14">
+          <widget class="QPushButton" name="symmetric_export_button">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
            <property name="text">
-            <string>Установить</string>
+            <string>Экпортировать</string>
            </property>
           </widget>
          </item>
         </layout>
        </item>
       </layout>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_2">
+     <widget class="QLabel" name="label_4">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>40</y>
+        <width>151</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Сертификата</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_3">
+     <widget class="QLabel" name="label_6">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>170</y>
+        <width>181</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Проверка подписи</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_4">
+     <widget class="QLabel" name="label_5">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>190</y>
+        <width>181</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Создание подписи</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_5">
+     <widget class="QLabel" name="label_7">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>160</y>
+        <width>171</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>зашифровать</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_6">
+     <widget class="QLabel" name="label_8">
+      <property name="geometry">
+       <rect>
+        <x>260</x>
+        <y>160</y>
+        <width>141</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Расшифровать</string>
+      </property>
      </widget>
     </widget>
    </widget>
@@ -302,7 +387,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="certificates_button">
+      <widget class="QPushButton" name="certificate_button">
        <property name="text">
         <string>Сертификаты</string>
        </property>

@@ -14,10 +14,8 @@ find_package(Qt5 COMPONENTS Concurrent Widgets Charts Sql REQUIRED)
 find_package(OpenSSL REQUIRED)
 
 # find_library(SQLITE3_LIB libsqlite3.a sqlite3)
+# find_package(Qt5Sql REQUIRED)
 
-
-# Установка пути к библиотеке QCustomPlot
-include_directories(/usr/include)
 
 # Генерация заголовочных файлов ui
 qt5_wrap_ui(UI_HEADERS mainwindow.ui)
@@ -35,9 +33,8 @@ target_link_libraries(main PRIVATE
     Qt5::Charts
     Qt5::Concurrent
     Qt5::Sql
-    qcustomplot
     ${OPENSSL_LIBRARIES}
-    OpenSSL::Crypto
+    # OpenSSL::Crypto
     # ${SQLITE3_LIB} 
 )
 
