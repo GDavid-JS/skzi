@@ -24,7 +24,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>7</number>
     </property>
     <widget class="QWidget" name="general">
      <widget class="QWidget" name="verticalLayoutWidget_2">
@@ -270,78 +270,347 @@
      </widget>
     </widget>
     <widget class="QWidget" name="page_2">
-     <widget class="QLabel" name="label_4">
+     <widget class="QWidget" name="verticalLayoutWidget_6">
       <property name="geometry">
        <rect>
-        <x>90</x>
-        <y>40</y>
-        <width>151</width>
-        <height>23</height>
+        <x>0</x>
+        <y>0</y>
+        <width>601</width>
+        <height>651</height>
        </rect>
       </property>
-      <property name="text">
-       <string>Сертификата</string>
-      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_6">
+       <item>
+        <widget class="QLabel" name="certificate_label">
+         <property name="text">
+          <string>Сертификаты</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="certificate_search">
+         <property name="placeholderText">
+          <string>поиск</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QTableWidget" name="certificate_table"/>
+       </item>
+       <item>
+        <layout class="QGridLayout" name="gridLayout_3">
+         <property name="spacing">
+          <number>7</number>
+         </property>
+         <item row="2" column="0">
+          <layout class="QHBoxLayout" name="horizontalLayout_3">
+           <item>
+            <widget class="QComboBox" name="certificate_combo_box"/>
+           </item>
+           <item>
+            <widget class="QPushButton" name="certificate_create_button">
+             <property name="text">
+              <string>Создать</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item row="1" column="0">
+          <widget class="QPushButton" name="certificate_delete_button">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="text">
+            <string>Удалить</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="0">
+          <widget class="QPushButton" name="certificate_export_button">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="text">
+            <string>Экпортировать</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
      </widget>
     </widget>
     <widget class="QWidget" name="page_3">
-     <widget class="QLabel" name="label_6">
+     <widget class="QWidget" name="verticalLayoutWidget_7">
       <property name="geometry">
        <rect>
-        <x>200</x>
-        <y>170</y>
-        <width>181</width>
-        <height>23</height>
+        <x>0</x>
+        <y>0</y>
+        <width>601</width>
+        <height>651</height>
        </rect>
       </property>
-      <property name="text">
-       <string>Проверка подписи</string>
-      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_7">
+       <item>
+        <widget class="QLabel" name="signature_label">
+         <property name="text">
+          <string>Создание подписи</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="signature_search">
+         <property name="placeholderText">
+          <string>поиск</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QTableWidget" name="signature_table"/>
+       </item>
+       <item>
+        <layout class="QGridLayout" name="gridLayout_5">
+         <item row="1" column="1">
+          <widget class="QLineEdit" name="signature_filepath_close"/>
+         </item>
+         <item row="0" column="1">
+          <widget class="QPushButton" name="signature_file_close_button">
+           <property name="text">
+            <string>Сохранить подпись как</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLineEdit" name="signature_filepath_open"/>
+         </item>
+         <item row="0" column="0">
+          <widget class="QPushButton" name="signature_file_open_button">
+           <property name="text">
+            <string>Выбрать файл для подписи</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0" colspan="2">
+          <widget class="QPushButton" name="signature_save_button">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="text">
+            <string>Подписать</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
      </widget>
     </widget>
     <widget class="QWidget" name="page_4">
-     <widget class="QLabel" name="label_5">
+     <widget class="QWidget" name="verticalLayoutWidget_8">
       <property name="geometry">
        <rect>
-        <x>220</x>
-        <y>190</y>
-        <width>181</width>
-        <height>23</height>
+        <x>0</x>
+        <y>0</y>
+        <width>601</width>
+        <height>651</height>
        </rect>
       </property>
-      <property name="text">
-       <string>Создание подписи</string>
-      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_8">
+       <item>
+        <widget class="QLabel" name="verification_label">
+         <property name="text">
+          <string>Проверка подписи</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="verification_search">
+         <property name="placeholderText">
+          <string>поиск</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QTableWidget" name="verification_table"/>
+       </item>
+       <item>
+        <layout class="QGridLayout" name="gridLayout_4">
+         <item row="0" column="0">
+          <widget class="QPushButton" name="verification_file_open_button">
+           <property name="font">
+            <font>
+             <family>Abyssinica SIL</family>
+             <pointsize>10</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Выбрать подписанный файл</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QPushButton" name="verification_file_close_button">
+           <property name="font">
+            <font>
+             <family>Abyssinica SIL</family>
+             <pointsize>10</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Выбрать файл с подписью</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLineEdit" name="verification_filepath_open"/>
+         </item>
+         <item row="1" column="1">
+          <widget class="QLineEdit" name="verification_filepath_close"/>
+         </item>
+         <item row="2" column="0" colspan="2">
+          <widget class="QPushButton" name="verification_test_button">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="text">
+            <string>Проверить подпись</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
      </widget>
     </widget>
     <widget class="QWidget" name="page_5">
-     <widget class="QLabel" name="label_7">
+     <widget class="QWidget" name="verticalLayoutWidget_9">
       <property name="geometry">
        <rect>
-        <x>150</x>
-        <y>160</y>
-        <width>171</width>
-        <height>23</height>
+        <x>0</x>
+        <y>0</y>
+        <width>601</width>
+        <height>651</height>
        </rect>
       </property>
-      <property name="text">
-       <string>зашифровать</string>
-      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_9">
+       <item>
+        <widget class="QLabel" name="encryp_label">
+         <property name="text">
+          <string>Зашифровать файл</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="encrypt_search">
+         <property name="placeholderText">
+          <string>поиск</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QTableWidget" name="encrypt_table"/>
+       </item>
+       <item>
+        <layout class="QGridLayout" name="gridLayout_6">
+         <item row="1" column="1">
+          <widget class="QLineEdit" name="encrypt_filepath_close"/>
+         </item>
+         <item row="0" column="0">
+          <widget class="QPushButton" name="encrypt_file_open_button">
+           <property name="text">
+            <string>Выбрать файл</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLineEdit" name="encrypt_filepath_open"/>
+         </item>
+         <item row="0" column="1">
+          <widget class="QPushButton" name="encrypt_file_close_button">
+           <property name="text">
+            <string>Сохранить как</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0" colspan="2">
+          <widget class="QPushButton" name="encrypt_save_button">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="text">
+            <string>Зашифровать</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
      </widget>
     </widget>
     <widget class="QWidget" name="page_6">
-     <widget class="QLabel" name="label_8">
+     <widget class="QWidget" name="verticalLayoutWidget_10">
       <property name="geometry">
        <rect>
-        <x>260</x>
-        <y>160</y>
-        <width>141</width>
-        <height>23</height>
+        <x>0</x>
+        <y>0</y>
+        <width>601</width>
+        <height>651</height>
        </rect>
       </property>
-      <property name="text">
-       <string>Расшифровать</string>
-      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_10">
+       <item>
+        <widget class="QLabel" name="decrypt_label">
+         <property name="text">
+          <string>Расшифровать файл</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="decrypt_search">
+         <property name="placeholderText">
+          <string>поиск</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QTableWidget" name="decrypt_table"/>
+       </item>
+       <item>
+        <layout class="QGridLayout" name="gridLayout_7">
+         <item row="1" column="1">
+          <widget class="QLineEdit" name="decrypt_filepath_close"/>
+         </item>
+         <item row="0" column="0">
+          <widget class="QPushButton" name="decrypt_file_open_button">
+           <property name="text">
+            <string>Выбрать файл</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLineEdit" name="decrypt_filepath_open"/>
+         </item>
+         <item row="0" column="1">
+          <widget class="QPushButton" name="decrypt_file_close_button">
+           <property name="text">
+            <string>Сохранить как</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0" colspan="2">
+          <widget class="QPushButton" name="decrypt_save_button">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="text">
+            <string>Расшифровать</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
      </widget>
     </widget>
    </widget>

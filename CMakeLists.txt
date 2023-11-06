@@ -34,7 +34,5 @@ target_link_libraries(main PRIVATE
     Qt5::Concurrent
     Qt5::Sql
     ${OPENSSL_LIBRARIES}
-    # OpenSSL::Crypto
-    # ${SQLITE3_LIB} 
 )
 
