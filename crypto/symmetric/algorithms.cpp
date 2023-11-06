@@ -4,11 +4,11 @@ public: \
     void generate_key() override { \
         Symmetric::template_generate_key(size); \
     } \
-    std::string encrypt(const std::string& data) override { \
-        return Symmetric::template_encrypt(type_macro, data); \
+    void encrypt(const std::string& input_file_path, const std::string& output_file_path) override { \
+        return Symmetric::template_encrypt(type_macro, input_file_path, output_file_path); \
     } \
-    std::string decrypt(const std::string& data) override { \
-        return Symmetric::template_decrypt(type_macro, data); \
+    void decrypt(const std::string& input_file_path, const std::string& output_file_path) override { \
+        return Symmetric::template_decrypt(type_macro, input_file_path, output_file_path); \
     } \
 };
 
